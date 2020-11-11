@@ -5,7 +5,6 @@
 <table>
   <thead>
     <tr>
-      <th>Quantity</th>
       <th>Product</th>
       <th>Date</th>
       <th>Amount</th>
@@ -16,7 +15,6 @@
   <tbody>
     <% @sales.each do |sale| %>
       <tr>
-        <td><%= sale.quantity %></td>
         <td><%= sale.product %></td>
         <td><%= sale.date %></td>
         <td><%= sale.amount %></td>

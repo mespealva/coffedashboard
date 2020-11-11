@@ -17,7 +17,6 @@ class SalesTest < ApplicationSystemTestCase
     fill_in "Amount", with: @sale.amount
     fill_in "Date", with: @sale.date
     fill_in "Product", with: @sale.product_id
-    fill_in "Quantity", with: @sale.quantity
     click_on "Create Sale"
 
     assert_text "Sale was successfully created"
@@ -31,7 +30,6 @@ class SalesTest < ApplicationSystemTestCase
     fill_in "Amount", with: @sale.amount
     fill_in "Date", with: @sale.date
     fill_in "Product", with: @sale.product_id
-    fill_in "Quantity", with: @sale.quantity
     click_on "Update Sale"
 
     assert_text "Sale was successfully updated"

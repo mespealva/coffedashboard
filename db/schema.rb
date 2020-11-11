@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_11_002603) do
+ActiveRecord::Schema.define(version: 2020_11_11_022445) do
 
   create_table "products", force: :cascade do |t|
     t.string "name"
@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 2020_11_11_002603) do
   end
 
   create_table "sales", force: :cascade do |t|
-    t.integer "quantity"
     t.integer "product_id"
     t.date "date"
     t.integer "amount"

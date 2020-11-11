@@ -14,14 +14,11 @@ Product.create(name: 'Don Estarbak', origin: 'venezuela', price: 2000)
 product_prices = Product.pluck :id, :price
 
 1000.times do
-
-  cant_random = rand(10..30)
   product_prices_random = product_prices.shuffle.first
 
   Sale.create(
-    quantity: cant_random,
     date: Faker::Date.between(from: '2017-01-01', to: Date.today),
     product_id: product_prices_random[0],
-    amount: (cant_random * product_prices_random[1])
+    amount: product_prices_random[1]
   )
 end
